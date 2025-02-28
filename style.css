@@ -1,0 +1,344 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #4682B4;
+}
+
+/* Header */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #4682B4;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+    margin-right: 15px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #ffffff;
+    flex-grow: 1;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #f4f4f4;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffdd57;
+}
+
+nav a.active {
+    color: #ffdd57;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(68, 115, 136, 0.7);
+    padding: 40px;
+    color: #fff;
+    max-width: 900px;
+    border-radius: 10px;
+}
+
+.hero-overlay h2 {
+    font-size: 3em;
+    margin: 0 0 20px 0;
+}
+
+.hero-overlay h1 {
+    font-size: 4.5em;
+    margin: 0 0 15px;
+}
+
+.hero-overlay p {
+    font-size: 1.8em;
+    margin: 10px 0;
+}
+
+/* About Section */
+.about-section {
+    background-image: url('img4.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 60px 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.about-section .content {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-section h2 {
+    color: #4682B4;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #333;
+}
+
+/* Attractions Section */
+.attractions-section {
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+.attractions-section h2 {
+    color: #4682B4;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.attraction-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.attraction {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.attraction:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.image-container {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.image-container img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+.attraction h3 {
+    color: #4682B4;
+    font-size: 1.5em;
+    margin: 15px 0;
+}
+
+.attraction p {
+    font-size: 1em;
+    color: #555;
+}
+
+.map-container {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.map-container h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #4682B4;
+}
+
+.map-container iframe {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* History Section */
+.history-section {
+    background-image: url('img1.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 60px 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.history-section .content {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.history-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.history-section p {
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #333;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.btn {
+    background-color: #4682B4;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #36648B;
+}
+
+/* Footer */
+footer {
+    background-color: #4682B4;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .logo {
+        margin-bottom: 10px;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .hero-overlay h2 {
+        font-size: 2em;
+    }
+    .hero-overlay h1 {
+        font-size: 3em;
+    }
+    .hero-overlay p {
+        font-size: 1.2em;
+    }
+}
